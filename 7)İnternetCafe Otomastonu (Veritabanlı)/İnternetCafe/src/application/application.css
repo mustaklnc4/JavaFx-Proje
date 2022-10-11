@@ -1,0 +1,124 @@
+.button:hover {
+    -fx-background-color: #1f5157 ;
+}
+
+.button:pressed, .button:default:hover:pressed {
+  -fx-background-color: white;
+  -fx-text-fill:  #7ba2a7;
+}
+
+.radiobuton{
+	 -fx-font-size: 12pt;
+    -fx-font-family: "Tahoma";
+    -fx-background-color:#1f5157;
+    -fx-border-width: 2;
+    -fx-border-color: #7ba2a7;
+     -fx-text-fill:white ;
+	
+}
+
+
+.label 
+{
+    -fx-font-size: 12pt;
+    -fx-font-family: "Tahoma";
+    -fx-text-fill: #7ba2a7;
+    -fx-opacity: 1.0;
+    
+}
+    
+.button:focused {
+    -fx-border-color: white, white;
+    -fx-border-width: 1, 1;
+    -fx-border-style: solid, segments(1, 1);
+    -fx-border-radius: 0, 0;
+    -fx-border-insets: 1 1 1 1, 0;
+}
+
+.button:disabled, .button:default:disabled {
+    -fx-opacity: 0.4;
+    -fx-background-color:  #7ba2a7;
+    -fx-text-fill: white;
+}
+
+.button:default {
+    -fx-background-color: -fx-focus-color;
+    -fx-text-fill: #ffffff;
+}
+
+.button:default:hover {
+    -fx-background-color: derive(-fx-focus-color,30%);
+}
+
+
+
+.text-field {
+	-fx-background-color: #7ba2a7;
+    -fx-border-width: 2;
+    -fx-border-color:#7ba2a7;
+    -fx-font-size: 14px;
+    -fx-text-fill: black ;
+    -fx-font-family: "Tahoma";
+	-fx-border-radius:5;
+}
+.root
+{
+	-fx-background-color:white;
+}
+
+.table-view
+{
+    -fx-base: #7ba2a7 ;
+    -fx-control-inner-background: #7ba2a7;
+    -fx-background-color:  #7ba2a7;
+    -fx-padding: 5;
+}
+.table-view .column-header-background {
+    -fx-background-color:  #7ba2a7;
+}
+.table-view .column-header, 
+.table-view .filler {
+    -fx-size: 15;
+    -fx-border-width: 0 0 1 0;
+    -fx-background-color:  #7ba2a7;
+    -fx-border-color: 
+        transparent
+        transparent
+        derive(-fx-base, 90%) 
+        transparent;
+    -fx-border-insets: 0 10 1 0;
+}
+
+.checkbox{
+	-fx-font-size: 12pt;
+    -fx-font-family: "Tahoma";
+    -fx-background-color: #7ba2a7;
+    -fx-border-width: 2;
+    -fx-border-color: #7ba2a7;
+	
+}
+.table-view .column-header .label {
+    -fx-font-size: 10pt;
+    -fx-font-family: "Tahoma";
+    -fx-text-fill: white;
+    -fx-alignment: center-left;
+    -fx-opacity: 1;
+}
+
+.table-view:focused .table-row-cell:filled:focused:selected {
+    -fx-background-color: -fx-focus-color;
+}
+.button 
+{
+    -fx-padding: 5 22 5 22;   
+    -fx-border-color: white;
+    -fx-border-width: 2;
+    -fx-background-radius: 15;
+    -fx-border-radius: 15;
+    -fx-background-color:  #7ba2a7;
+    -fx-font-family: "Tahoma", Helvetica, Arial, sans-serif;
+    -fx-font-size: 11pt;
+    -fx-text-fill: #ffffff;
+    -fx-background-insets: 0 0 0 0, 0, 1, 2;
+}
+

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anasayfa_ancpane" prefHeight="550.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.kullanici">
+    <children>
+        <ImageView fitHeight="550.0" fitWidth="750.0" layoutX="178.0" layoutY="14.0" opacity="0.83" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <image>
+                <Image url="@../image/personeltakip.jpg" />
+            </image>
+        </ImageView>
+      <Pane layoutX="169.0" layoutY="154.0" opacity="0.88" prefHeight="185.0" prefWidth="468.0" style="-fx-background-color: white;">
+         <effect>
+            <DropShadow height="109.95" radius="44.84" width="71.41" />
+         </effect>
+         <children>
+            <HBox layoutX="23.0" layoutY="26.0" prefHeight="148.0" prefWidth="428.0" spacing="10.0">
+               <children>
+                  <VBox prefHeight="148.0" prefWidth="280.0" spacing="10.0">
+                     <children>
+                        <HBox prefHeight="55.0" prefWidth="243.0" spacing="10.0">
+                           <children>
+                              <ImageView fitHeight="55.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../image/38119110-staff-or-team-icon.jpg" />
+                                 </image>
+                              </ImageView>
+                              <JFXButton fx:id="btn_personel1" onAction="#event_personel" prefHeight="55.0" prefWidth="135.0" style="-fx-background-color: #ae5151;" text="Personel" textFill="WHITE">
+                                 <font>
+                                    <Font name="Agency FB" size="21.0" />
+                                 </font>
+                              </JFXButton>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="50.0" prefWidth="243.0" spacing="10.0">
+                           <children>
+                              <ImageView fitHeight="54.0" fitWidth="77.0" pickOnBounds="true">
+                                 <image>
+                                    <Image url="@../image/üye%20kayıt.png" />
+                                 </image>
+                              </ImageView>
+                              <JFXButton fx:id="btn_üye" onAction="#event_üye" prefHeight="52.0" prefWidth="157.0" style="-fx-background-color: #ae5151;" text="Personeller" textFill="WHITE">
+                                 <font>
+                                    <Font name="Agency FB" size="21.0" />
+                                 </font>
+                              </JFXButton>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="148.0" prefWidth="211.0" spacing="10.0">
+                     <children>
+                        <HBox prefHeight="57.0" prefWidth="200.0" spacing="10.0">
+                           <children>
+                              <ImageView fitHeight="59.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../image/emekli.jpg" />
+                                 </image>
+                              </ImageView>
+                              <JFXButton fx:id="btn_emekli" onAction="#event_emekli" prefHeight="53.0" prefWidth="158.0" style="-fx-background-color: #ae5151;" text="Emekli" textFill="WHITE">
+                                 <font>
+                                    <Font name="Agency FB" size="21.0" />
+                                 </font>
+                              </JFXButton>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="67.0" prefWidth="183.0" spacing="10.0">
+                           <children>
+                              <ImageView fitHeight="53.0" fitWidth="59.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../image/cık.png" />
+                                 </image>
+                              </ImageView>
+                              <JFXButton fx:id="btn_geri" onAction="#event_geri" prefHeight="60.0" prefWidth="115.0" style="-fx-background-color: #ae5151;" text="Geri Dön" textFill="WHITE">
+                                 <font>
+                                    <Font name="Agency FB" size="21.0" />
+                                 </font>
+                              </JFXButton>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </Pane>
+    </children>
+</AnchorPane>

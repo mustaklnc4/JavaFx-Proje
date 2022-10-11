@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="a_kayit" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="269.0" prefWidth="518.0" style="-fx-background-color: #00e676;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Listele">
+   <children>
+      <TableView fx:id="PersonelListele" layoutX="39.0" layoutY="35.0" prefHeight="200.0" prefWidth="441.0">
+         <columns>
+            <TableColumn fx:id="c_id" prefWidth="75.0" text="id" />
+            <TableColumn fx:id="c_adi" prefWidth="140.0" text="Adı" />
+            <TableColumn fx:id="c_mail" prefWidth="118.0" text="Mail" />
+            <TableColumn fx:id="c_sifre" prefWidth="105.0" text="Şifre" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

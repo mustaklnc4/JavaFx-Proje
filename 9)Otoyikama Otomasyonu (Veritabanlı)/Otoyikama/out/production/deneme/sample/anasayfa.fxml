@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anasayfa_ancpane" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.anasayfa">
+   <children>
+      <ImageView fitHeight="700.0" fitWidth="1000.0" opacity="0.6" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@../image/oto_yikama5.jpg" />
+         </image>
+      </ImageView>
+      <HBox layoutX="52.0" layoutY="586.0" prefHeight="83.0" prefWidth="897.0" spacing="10.0">
+         <children>
+            <ImageView fitHeight="65.0" fitWidth="94.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/cık.png" />
+               </image>
+            </ImageView>
+            <JFXButton fx:id="btn_geri" onAction="#event_geri" prefHeight="66.0" prefWidth="101.0" style="-fx-background-color: #21598c; -fx-background-radius: 20;" text="Geri Dön" textFill="WHITE">
+               <font>
+                  <Font name="Arial Narrow" size="21.0" />
+               </font>
+            </JFXButton>
+            <ImageView fitHeight="70.0" fitWidth="87.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/üyekontrol.png" />
+               </image>
+            </ImageView>
+            <JFXButton fx:id="btn_üye" onAction="#event_üye" prefHeight="65.0" prefWidth="123.0" style="-fx-background-color: #21598c; -fx-background-radius: 20;" text="Üye Kontrol" textFill="WHITE">
+               <font>
+                  <Font name="Arial Narrow" size="21.0" />
+               </font>
+            </JFXButton>
+            <ImageView fitHeight="64.0" fitWidth="102.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/iconaraba.jpg" />
+               </image>
+            </ImageView>
+            <JFXButton fx:id="btn_oto_kayit" onAction="#event_oto_kayit" prefHeight="64.0" prefWidth="106.0" style="-fx-background-color: #21598c; -fx-background-radius: 20;" text="Oto Kayıt" textFill="WHITE">
+               <font>
+                  <Font name="Arial Narrow" size="21.0" />
+               </font>
+            </JFXButton>
+            <ImageView fitHeight="63.0" fitWidth="79.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../image/otoparlat.jpg" />
+               </image>
+            </ImageView>
+            <JFXButton fx:id="btn_temizlenen" onAction="#event_temizlenen" prefHeight="66.0" prefWidth="124.0" style="-fx-background-color: #21598c; -fx-background-radius: 20;" text="Temizlenen" textFill="WHITE">
+               <font>
+                  <Font name="Arial Narrow" size="21.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </HBox>
+      <AnchorPane layoutX="233.0" layoutY="54.0" opacity="0.64" prefHeight="73.0" prefWidth="539.0" style="-fx-background-color: #21598c; -fx-background-radius: 20;">
+         <children>
+            <Label layoutX="118.0" layoutY="11.0" prefHeight="56.0" prefWidth="319.0" text="Yönetici Girişi, Hoşgeldiniz..." textFill="#d8f3ff">
+               <font>
+                  <Font name="Agency FB Bold" size="33.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

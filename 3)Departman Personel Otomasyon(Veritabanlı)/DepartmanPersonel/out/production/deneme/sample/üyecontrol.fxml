@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anasayfa_ancpane" prefHeight="550.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.üyecontrol">
+    <children>
+      <Label fx:id="lbl_deger" alignment="TOP_CENTER" layoutX="261.0" layoutY="614.0" prefHeight="37.0" prefWidth="178.0">
+         <font>
+            <Font name="Bauhaus 93" size="16.0" />
+         </font>
+      </Label>
+      <VBox alignment="TOP_CENTER" layoutX="163.0" layoutY="78.0" prefHeight="368.0" prefWidth="425.0" spacing="15.0">
+         <children>
+            <TableView fx:id="tableview" onMouseClicked="#event_görüntüle" opacity="0.87" prefHeight="167.0" prefWidth="302.0" style="-fx-background-radius: 20; -fx-background-color: #ae5151;">
+              <columns>
+                <TableColumn fx:id="colon_id" prefWidth="75.0" text="id" />
+                <TableColumn fx:id="colon_kulad" prefWidth="118.0" text="Kullanıcı Adı" />
+                  <TableColumn fx:id="colon_parola" prefWidth="107.0" text="Şifre" />
+                  <TableColumn fx:id="colon_yetki" prefWidth="124.0" text="Yetki" />
+              </columns>
+            </TableView>
+            <HBox alignment="TOP_CENTER" prefHeight="45.0" prefWidth="396.0" spacing="5.0">
+               <children>
+                    <JFXButton fx:id="btn_geri" onAction="#event_geri" prefHeight="33.0" prefWidth="81.0" style="-fx-background-color: #ae5151;" text="Anasayfa" textFill="WHITE">
+                        <font>
+                            <Font name="Bell MT Bold" size="12.0" />
+                        </font>
+                    </JFXButton>
+                    <JFXButton fx:id="btn_üye" onAction="#event_üye" prefHeight="33.0" prefWidth="81.0" style="-fx-background-color: #ae5151;" text="Üye Olmak" textFill="WHITE">
+                        <font>
+                            <Font name="Bell MT Bold" size="12.0" />
+                        </font>
+                    </JFXButton>
+                  <JFXButton fx:id="btn_sil" onAction="#event_sil" prefHeight="33.0" prefWidth="81.0" style="-fx-background-color: #ae5151;" text="Silmek" textFill="WHITE">
+                     <font>
+                        <Font name="Bell MT" size="12.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="btn_güncelle" onAction="#event_güncelle" prefHeight="33.0" prefWidth="116.0" style="-fx-background-color: #ae5151;" text="Güncellemek" textFill="WHITE">
+                     <font>
+                        <Font name="Bell MT" size="12.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </HBox>
+            <VBox alignment="TOP_CENTER" prefHeight="121.0" prefWidth="425.0">
+               <children>
+                  <HBox alignment="TOP_CENTER" prefHeight="57.0" prefWidth="200.0" spacing="10.0">
+                     <children>
+                        <JFXTextField fx:id="txt_user" focusColor="#ae5151" labelFloat="true" prefHeight="37.0" prefWidth="185.0" promptText="Kullanıcı adı" unFocusColor="#474747">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXComboBox fx:id="combo_yetki" focusColor="#ae5151" prefHeight="37.0" prefWidth="153.0" promptText="Yetkili" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="TOP_CENTER" prefHeight="57.0" prefWidth="200.0" spacing="10.0">
+                     <children>
+                        <JFXPasswordField fx:id="txt_parola" accessibleRole="TEXT_FIELD" focusColor="#ae5151" labelFloat="true" promptText="Şifre">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </JFXPasswordField>
+                        <JFXPasswordField fx:id="txt_parolatekrar" accessibleRole="TEXT_FIELD" focusColor="#ae5151" labelFloat="true" prefHeight="37.0" prefWidth="156.0" promptText="Şifre Tekrar">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </JFXPasswordField>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+    </children>
+</AnchorPane>

@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXSlider?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="personel_ancpane" prefHeight="700.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.personel">
+   <children>
+      <ImageView fitHeight="700.0" fitWidth="1100.0" opacity="0.86" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@../image/personeltakip.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="7.0" layoutY="75.0" opacity="0.93" prefHeight="600.0" prefWidth="1100.0" style="-fx-background-color: #e9e9e9; -fx-background-radius: 30;">
+         <children>
+            <VBox alignment="TOP_CENTER" layoutX="2.0" layoutY="9.0" prefHeight="590.0" prefWidth="1081.0" spacing="15.0">
+               <children>
+                  <TableView fx:id="tableview" onMouseClicked="#event_görüntüle" opacity="0.87" prefHeight="233.0" prefWidth="1081.0" style="-fx-background-radius: 20; -fx-background-color: #ae5151;">
+                     <columns>
+                        <TableColumn fx:id="colon_id" prefWidth="52.0" text="id" />
+                        <TableColumn fx:id="colon_ad" prefWidth="100.0" text="Adı" />
+                        <TableColumn fx:id="colon_soyad" prefWidth="93.0" text="Soyadı" />
+                        <TableColumn fx:id="colon_tc" prefWidth="79.0" text="TC" />
+                        <TableColumn fx:id="colon_sicilno" prefWidth="75.0" text="Sicilno" />
+                        <TableColumn fx:id="colon_telefon" prefWidth="75.0" text="Telefon" />
+                        <TableColumn fx:id="colon_adres" prefWidth="101.0" text="Adres" />
+                        <TableColumn fx:id="colon_departman" prefWidth="88.0" text="Departman" />
+                        <TableColumn fx:id="colon_durum" prefWidth="91.0" text="Durum" />
+                        <TableColumn fx:id="colon_tarih_baslama" prefWidth="95.0" text="Başlama Tarih" />
+                        <TableColumn fx:id="colon_tarih_bitis" prefWidth="75.0" text="Bitiş Tarih" />
+                        <TableColumn fx:id="colon_iban" prefWidth="75.0" text="iban" />
+                        <TableColumn fx:id="colon_maas" prefWidth="75.0" text="Maaş" />
+                     </columns>
+                  </TableView>
+                  <HBox alignment="TOP_CENTER" prefHeight="36.0" prefWidth="1017.0" spacing="5.0">
+                     <children>
+                        <JFXButton fx:id="btn_geri" onAction="#event_geri" prefHeight="33.0" prefWidth="81.0" style="-fx-background-color: #ae5151;" text="Geri Dön" textFill="WHITE">
+                           <font>
+                              <Font name="Arial" size="12.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="btn_üye" onAction="#event_üye" prefHeight="33.0" prefWidth="81.0" style="-fx-background-color: #ae5151;" text="Üye Ol" textFill="WHITE">
+                           <font>
+                              <Font name="Arial" size="12.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="btn_sil" onAction="#event_sil" prefHeight="33.0" prefWidth="81.0" style="-fx-background-color: #ae5151;" text="Üye Sil" textFill="WHITE">
+                           <font>
+                              <Font name="Arial" size="16.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="btn_güncelle" onAction="#event_güncelle" prefHeight="33.0" prefWidth="116.0" style="-fx-background-color: #ae5151;" text="Üye Güncelle" textFill="WHITE">
+                           <font>
+                              <Font name="Arial" size="12.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="btn_emekli_yap" onAction="#event_emekli_yap" prefHeight="33.0" prefWidth="116.0" style="-fx-background-color: #ae5151;" text="izinli Yap" textFill="WHITE">
+                           <font>
+                              <Font name="Arial" size="17.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+                  <HBox alignment="TOP_CENTER" prefHeight="207.0" prefWidth="292.0" spacing="60.0">
+                     <children>
+                        <VBox alignment="TOP_CENTER" prefHeight="205.0" prefWidth="197.0" spacing="20.0">
+                           <children>
+                              <JFXTextField fx:id="txt_ad" focusColor="#ae5151" labelFloat="true" promptText="Ad" unFocusColor="#474747">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </JFXTextField>
+                              <JFXTextField fx:id="txt_soyad" focusColor="#ae5151" labelFloat="true" promptText="Soyad" unFocusColor="#474747">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </JFXTextField>
+                              <JFXTextField fx:id="txt_tc" focusColor="#ae5151" labelFloat="true" promptText="Tc" unFocusColor="#474747">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </JFXTextField>
+                              <JFXTextField fx:id="txt_sicil" focusColor="#ae5151" labelFloat="true" promptText="Sicil No" unFocusColor="#474747">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </JFXTextField>
+                           </children>
+                        </VBox>
+                        <VBox alignment="TOP_CENTER" prefHeight="244.0" prefWidth="290.0" spacing="20.0">
+                           <children>
+                              <JFXTextField fx:id="txt_telefon" focusColor="#ae5151" labelFloat="true" promptText="Telefon" unFocusColor="#474747">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </JFXTextField>
+                              <JFXTextField fx:id="txt_adres" focusColor="#ae5151" labelFloat="true" promptText="Adres" unFocusColor="#474747">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </JFXTextField>
+                              <JFXTextField fx:id="txt_iban" alignment="TOP_LEFT" focusColor="#ae5151" labelFloat="true" maxWidth="518.0" prefHeight="37.0" prefWidth="518.0" promptText="İban Numarası" unFocusColor="#474747">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </JFXTextField>
+                              <JFXComboBox fx:id="combo_departman" prefHeight="37.0" prefWidth="318.0" promptText="Departman" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="TOP_CENTER" prefHeight="254.0" prefWidth="292.0" spacing="5.0">
+                           <children>
+                              <Label alignment="TOP_CENTER" prefHeight="30.0" prefWidth="161.0" text="Baslama Tarihi" textFill="#c32a2a">
+                                 <font>
+                                    <Font name="Berlin Sans FB" size="20.0" />
+                                 </font>
+                              </Label>
+                              <JFXDatePicker fx:id="data_tarih_baslangic" prefHeight="38.0" prefWidth="224.0" />
+                              <Label fx:id="label_baslama" alignment="TOP_CENTER" prefHeight="29.0" prefWidth="161.0" textFill="#8a0000">
+                                 <font>
+                                    <Font name="Berlin Sans FB Demi Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="TOP_CENTER" prefHeight="30.0" prefWidth="161.0" text="Bitis Tarihi" textFill="#c32a2a">
+                                 <font>
+                                    <Font name="Berlin Sans FB Demi Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                              <JFXDatePicker fx:id="data_tarih_bitis" prefHeight="38.0" prefWidth="224.0" />
+                              <Label fx:id="label_bitis" alignment="TOP_CENTER" prefHeight="30.0" prefWidth="161.0" textFill="#8a0000">
+                                 <font>
+                                    <Font name="Berlin Sans FB" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="TOP_CENTER" prefHeight="30.0" prefWidth="161.0" text="Alınan Maas" textFill="#c32a2a">
+                                 <font>
+                                    <Font name="Berlin Sans FB Demi Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                              <JFXSlider fx:id="slider_maas" blockIncrement="25.0" majorTickUnit="100.0" max="10000.0" min="1000.0" minorTickCount="5" prefHeight="35.0" prefWidth="224.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="5.0" />
+                              <Label fx:id="label_maas_deger" alignment="TOP_CENTER" prefHeight="30.0" prefWidth="161.0" textFill="#8a0000">
+                                 <font>
+                                    <Font name="Berlin Sans FB" size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0" spacing="20.0">
+                           <children>
+                              <Label alignment="TOP_CENTER" prefHeight="30.0" prefWidth="161.0" text="Durum" textFill="#c32a2a">
+                                 <font>
+                                    <Font name="Berlin Sans FB Demi Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                              <JFXRadioButton fx:id="radio_calisiyor" text="Çalısıyor" textFill="#970303">
+                                 <font>
+                                    <Font name="Berlin Sans FB" size="15.0" />
+                                 </font>
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="radio_durum" />
+                                 </toggleGroup>
+                              </JFXRadioButton>
+                              <JFXRadioButton fx:id="radio_izinli" text="izinli" textFill="#970303" toggleGroup="$radio_durum">
+                                 <font>
+                                    <Font name="Berlin Sans FB" size="15.0" />
+                                 </font>
+                              </JFXRadioButton>
+                              <JFXRadioButton fx:id="radio_emekli" text="Emekli" textFill="#970303" toggleGroup="$radio_durum">
+                                 <font>
+                                    <Font name="Berlin Sans FB Demi Bold" size="15.0" />
+                                 </font>
+                              </JFXRadioButton>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <Label alignment="TOP_CENTER" layoutX="240.0" layoutY="14.0" prefHeight="38.0" prefWidth="557.0" text="PERSONEL KAYIT VE iZiN ALMA" textFill="WHITE">
+         <font>
+            <Font name="Berlin Sans FB" size="26.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

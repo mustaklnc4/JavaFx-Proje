@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="izin_ancpane" prefHeight="700.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.izinli">
+    <children>
+      <Label fx:id="lbl_ad" alignment="TOP_CENTER" disable="true" layoutX="10.0" layoutY="10.0" opacity="0.0" prefHeight="42.0" prefWidth="172.0" text=".." textFill="#8a0000">
+         <font>
+            <Font name="Bauhaus 93" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbl_soyad" alignment="TOP_CENTER" disable="true" layoutX="30.0" layoutY="30.0" opacity="0.0" prefHeight="42.0" prefWidth="172.0" text=".." textFill="#8a0000">
+         <font>
+            <Font name="Bauhaus 93" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbl_tc" alignment="TOP_CENTER" disable="true" layoutX="30.0" layoutY="30.0" opacity="0.0" prefHeight="42.0" prefWidth="172.0" text=".." textFill="#8a0000">
+         <font>
+            <Font name="Bauhaus 93" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbl_sicil" alignment="TOP_CENTER" disable="true" layoutX="20.0" layoutY="20.0" opacity="0.0" prefHeight="42.0" prefWidth="172.0" text=".." textFill="#8a0000">
+         <font>
+            <Font name="Bauhaus 93" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbl_telefon" alignment="TOP_CENTER" disable="true" layoutX="20.0" layoutY="20.0" opacity="0.0" prefHeight="42.0" prefWidth="172.0" text=".." textFill="#8a0000">
+         <font>
+            <Font name="Bauhaus 93" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbl_adres" alignment="TOP_CENTER" disable="true" layoutX="20.0" layoutY="20.0" opacity="0.0" prefHeight="42.0" prefWidth="172.0" text=".." textFill="#8a0000">
+         <font>
+            <Font name="Bauhaus 93" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbl_departman" alignment="TOP_CENTER" disable="true" layoutX="10.0" layoutY="10.0" opacity="0.0" prefHeight="42.0" prefWidth="172.0" text=".." textFill="#8a0000">
+         <font>
+            <Font name="Bauhaus 93" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbl_durum" alignment="TOP_CENTER" disable="true" layoutX="10.0" layoutY="10.0" opacity="0.0" prefHeight="42.0" prefWidth="172.0" text=".." textFill="#8a0000">
+         <font>
+            <Font name="Bauhaus 93" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbl_basla_tarih" alignment="TOP_CENTER" disable="true" layoutX="10.0" layoutY="10.0" opacity="0.0" prefHeight="42.0" prefWidth="172.0" text=".." textFill="#8a0000">
+         <font>
+            <Font name="Bauhaus 93" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbl_bitis_tarih" alignment="TOP_CENTER" disable="true" layoutX="10.0" layoutY="10.0" opacity="0.0" prefHeight="42.0" prefWidth="172.0" text=".." textFill="#8a0000">
+         <font>
+            <Font name="Bauhaus 93" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbl_iban" alignment="TOP_CENTER" disable="true" layoutX="10.0" layoutY="10.0" opacity="0.0" prefHeight="42.0" prefWidth="172.0" text=".." textFill="#8a0000">
+         <font>
+            <Font name="Bauhaus 93" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbl_maas" alignment="TOP_CENTER" disable="true" layoutX="10.0" layoutY="10.0" opacity="0.0" prefHeight="42.0" prefWidth="172.0" text=".." textFill="#8a0000">
+         <font>
+            <Font name="Bauhaus 93" size="15.0" />
+         </font>
+      </Label>
+        <ImageView fitHeight="700.0" fitWidth="1100.0" opacity="0.9" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <image>
+                <Image url="@../image/personeltakip.jpg" />
+            </image>
+        </ImageView>
+        <AnchorPane layoutX="7.0" layoutY="44.0" opacity="0.93" prefHeight="646.0" prefWidth="1100.0" style="-fx-background-color: #e9e9e9; -fx-background-radius: 30;">
+            <children>
+                <VBox alignment="TOP_CENTER" layoutX="2.0" layoutY="9.0" prefHeight="639.0" prefWidth="1081.0" spacing="10.0">
+                    <children>
+                        <TableView fx:id="tableview" onMouseClicked="#event_görüntüle" opacity="0.87" prefHeight="169.0" prefWidth="1081.0" style="-fx-background-radius: 20; -fx-background-color: #ae5151;">
+                            <columns>
+                                <TableColumn fx:id="colon_id" prefWidth="52.0" text="id" />
+                                <TableColumn fx:id="colon_ad" prefWidth="100.0" text="Adı" />
+                                <TableColumn fx:id="colon_soyad" prefWidth="93.0" text="Soyadı" />
+                                <TableColumn fx:id="colon_tc" prefWidth="79.0" text="TC" />
+                                <TableColumn fx:id="colon_sicilno" prefWidth="75.0" text="Sicilno" />
+                                <TableColumn fx:id="colon_telefon" prefWidth="75.0" text="Telefon" />
+                                <TableColumn fx:id="colon_adres" prefWidth="101.0" text="Adres" />
+                                <TableColumn fx:id="colon_departman" prefWidth="88.0" text="Departman" />
+                                <TableColumn fx:id="colon_durum" prefWidth="91.0" text="Durum" />
+                                <TableColumn fx:id="colon_tarih_baslama" prefWidth="95.0" text="Başlama Tarih" />
+                                <TableColumn fx:id="colon_tarih_bitis" prefWidth="75.0" text="Bitiş Tarih" />
+                                <TableColumn fx:id="colon_iban" prefWidth="75.0" text="iban" />
+                                <TableColumn fx:id="colon_maas" prefWidth="75.0" text="Maaş" />
+                            </columns>
+                        </TableView>
+                        <HBox alignment="TOP_CENTER" prefHeight="63.0" prefWidth="1081.0" spacing="5.0">
+                            <children>
+                                <JFXButton fx:id="btn_geri" onAction="#event_geri" prefHeight="33.0" prefWidth="117.0" style="-fx-background-color: #ae5151;" text="Anamenü" textFill="WHITE">
+                                    <font>
+                                        <Font name="Arial" size="18.0" />
+                                    </font>
+                                </JFXButton>
+                                <JFXButton fx:id="btn_sorgula" onAction="#event_sorgula" prefHeight="33.0" prefWidth="106.0" style="-fx-background-color: #ae5151;" text="Sorgula" textFill="WHITE">
+                                    <font>
+                                        <Font name="Arial" size="18.0" />
+                                    </font>
+                                </JFXButton>
+                                <JFXButton fx:id="btn_sil" onAction="#event_sil" prefHeight="33.0" prefWidth="105.0" style="-fx-background-color: #ae5151;" text="Üye Sil" textFill="WHITE">
+                                    <font>
+                                        <Font name="Arial" size="18.0" />
+                                    </font>
+                                </JFXButton>
+                                <JFXButton fx:id="btn_izin_bitir" onAction="#event_izin_bitir" prefHeight="33.0" prefWidth="116.0" style="-fx-background-color: #ae5151;" text="izin Bitir" textFill="WHITE">
+                                    <font>
+                                        <Font name="Arial" size="17.0" />
+                                    </font>
+                                </JFXButton>
+                            </children>
+                        </HBox>
+                        <HBox alignment="TOP_CENTER" prefHeight="445.0" prefWidth="1081.0" spacing="10.0">
+                     <children>
+                        <PieChart fx:id="pastadilimi" prefHeight="412.0" prefWidth="556.0" />
+                        <BarChart fx:id="Salarychart" prefHeight="412.0" prefWidth="508.0">
+                          <xAxis>
+                            <CategoryAxis side="BOTTOM" fx:id="x" />
+                          </xAxis>
+                          <yAxis>
+                            <NumberAxis fx:id="y" side="LEFT" />
+                          </yAxis>
+                        </BarChart>
+                     </children>
+                        </HBox>
+                  <HBox alignment="TOP_CENTER" prefHeight="63.0" prefWidth="1081.0">
+                     <children>
+                        <Label fx:id="lbl_deger" alignment="TOP_CENTER" prefHeight="42.0" prefWidth="172.0" textFill="#8a0000">
+                           <font>
+                              <Font name="Bauhaus 93" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="label_departman" alignment="TOP_CENTER" prefHeight="30.0" prefWidth="161.0" text="Departman" textFill="#8a0000">
+                           <font>
+                              <Font name="Agency FB" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="label_izinli" alignment="TOP_CENTER" prefHeight="30.0" prefWidth="161.0" text="izinli" textFill="#8a0000">
+                           <font>
+                              <Font name="Agency FB" size="21.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="label_tarih" alignment="TOP_CENTER" prefHeight="30.0" prefWidth="280.0" text="Tarih" textFill="#8a0000">
+                           <font>
+                              <Font name="Agency FB" size="21.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                    </children>
+                </VBox>
+            </children>
+        </AnchorPane>
+        <Label alignment="TOP_CENTER" layoutX="244.0" layoutY="6.0" prefHeight="38.0" prefWidth="557.0" text="PERSONEL iZiN ALANLAR VE SORGULAMA" textFill="WHITE">
+            <font>
+                <Font name="Bauhaus 93" size="26.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>

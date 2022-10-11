@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXSlider?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="a_otokayit" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.oto_kayit">
+   <children>
+      <ImageView fitHeight="700.0" fitWidth="1000.0" opacity="0.76" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@../image/oto_yikama5.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="38.0" layoutY="48.0" opacity="0.83" prefHeight="642.0" prefWidth="924.0" style="-fx-background-color: #e9e9e9; -fx-background-radius: 30;">
+         <children>
+            <VBox alignment="TOP_CENTER" layoutX="-3.0" layoutY="14.0" prefHeight="615.0" prefWidth="926.0" spacing="15.0">
+               <children>
+                  <HBox alignment="TOP_CENTER" prefHeight="125.0" prefWidth="946.0" spacing="5.0">
+                     <children>
+                        <JFXButton fx:id="btn_geri" onAction="#event_geri" prefHeight="59.0" prefWidth="81.0" style="-fx-background-color: #2aa9c1;" text="Anasayfa" textFill="WHITE">
+                           <font>
+                              <Font name="Agency FB" size="18.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="btn_üye" onAction="#event_üye" prefHeight="57.0" prefWidth="81.0" style="-fx-background-color: #2aa9c1;" text="Oto Kayıt" textFill="WHITE">
+                           <font>
+                              <Font name="Agency FB Bold" size="18.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="btn_sil" onAction="#event_sil" prefHeight="53.0" prefWidth="81.0" style="-fx-background-color: #2aa9c1;" text="Oto Sil" textFill="WHITE">
+                           <font>
+                              <Font name="Agency FB Bold" size="18.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="btn_güncelle" onAction="#event_güncelle" prefHeight="57.0" prefWidth="116.0" style="-fx-background-color: #2aa9c1;" text="Oto Güncelle" textFill="WHITE">
+                           <font>
+                              <Font name="Agency FB Bold" size="18.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="btn_hazir" onAction="#event_hazir" prefHeight="52.0" prefWidth="116.0" style="-fx-background-color: #2aa9c1;" text="Hazır Yap" textFill="WHITE">
+                           <font>
+                              <Font name="Agency FB Bold" size="18.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+                  <TableView fx:id="tableview" onMouseClicked="#event_görüntüle" opacity="0.87" prefHeight="391.0" prefWidth="952.0" style="-fx-background-radius: 20; -fx-background-color: #2aa9c1;">
+                     <columns>
+                        <TableColumn fx:id="colon_id" prefWidth="52.0" text="id" />
+                        <TableColumn fx:id="colon_ad_soyad" prefWidth="114.0" text="Müşteri Ad Soyad" />
+                        <TableColumn fx:id="colon_plaka" prefWidth="97.0" text="Plaka" />
+                        <TableColumn fx:id="colon_tc" prefWidth="61.0" text="TC" />
+                        <TableColumn fx:id="colon_telefon" prefWidth="75.0" text="Telefon" />
+                        <TableColumn fx:id="colon_giris_taih" prefWidth="75.0" text="Giriş Tarihi" />
+                        <TableColumn fx:id="colon_cikis_tarih" prefWidth="95.0" text="Çıkış Tarihi" />
+                        <TableColumn fx:id="colon_paket" prefWidth="101.0" text="Paket" />
+                        <TableColumn fx:id="colon_marka" prefWidth="88.0" text="Araç Marka" />
+                        <TableColumn fx:id="colon_model" prefWidth="91.0" text="Araç Model" />
+                        <TableColumn fx:id="colon_ücret" prefWidth="95.0" text="Ücret" />
+                     </columns>
+                  </TableView>
+                  <HBox alignment="TOP_CENTER" prefHeight="428.0" prefWidth="926.0" spacing="60.0">
+                     <children>
+                        <VBox alignment="TOP_CENTER" prefHeight="265.0" prefWidth="212.0" spacing="20.0">
+                           <children>
+                              <JFXTextField fx:id="txt_ad_soyad" focusColor="#2aa9c1" labelFloat="true" promptText="Müşteri Ad Soyad" unFocusColor="#474747">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </JFXTextField>
+                              <JFXTextField fx:id="txt_plaka" focusColor="#2aa9c1" labelFloat="true" promptText="Araç Plaka" unFocusColor="#474747">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </JFXTextField>
+                              <JFXTextField fx:id="txt_tc" focusColor="#2aa9c1" labelFloat="true" promptText="Müşteri Tc" unFocusColor="#474747">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </JFXTextField>
+                              <JFXTextField fx:id="txt_telefon" focusColor="#2aa9c1" labelFloat="true" promptText="Telefon" unFocusColor="#474747">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </JFXTextField>
+                              <JFXComboBox fx:id="cmb_marka" prefHeight="37.0" prefWidth="318.0" promptText="Araç Marka" />
+                              <JFXTextField fx:id="txt_model" focusColor="#2aa9c1" labelFloat="true" promptText="Araç Model" unFocusColor="#474747">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </JFXTextField>
+                              <JFXComboBox fx:id="cmb_paket" prefHeight="37.0" prefWidth="318.0" promptText="Paket" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="TOP_CENTER" prefHeight="382.0" prefWidth="180.0" spacing="20.0">
+                           <children>
+                              <VBox prefHeight="132.0" prefWidth="180.0" spacing="10.0">
+                                 <children>
+                                    <Label alignment="TOP_CENTER" prefHeight="30.0" prefWidth="189.0" text="Araç Durum" textFill="#2aa9c1">
+                                       <font>
+                                          <Font name="Agency FB Bold" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <JFXRadioButton fx:id="rd_hazir" prefHeight="31.0" prefWidth="180.0" text="Hazır, Tamamlandı" textFill="#2aa9c1">
+                                       <font>
+                                          <Font name="Agency FB Bold" size="18.0" />
+                                       </font>
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="radio_durum" />
+                                       </toggleGroup>
+                                    </JFXRadioButton>
+                                    <JFXRadioButton fx:id="rd_temizlemede" prefHeight="29.0" prefWidth="180.0" text="Temizlemede" textFill="#2aa9c1" toggleGroup="$radio_durum">
+                                       <font>
+                                          <Font name="Agency FB Bold" size="18.0" />
+                                       </font>
+                                    </JFXRadioButton>
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="254.0" prefWidth="208.0" spacing="5.0">
+                                 <children>
+                                    <Label alignment="TOP_CENTER" prefHeight="30.0" prefWidth="161.0" text="Giriş Tarihi" textFill="#2aa9c1">
+                                       <font>
+                                          <Font name="Agency FB Bold" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <JFXDatePicker fx:id="data_giris" onAction="#data_giris" prefHeight="25.0" prefWidth="172.0" />
+                                    <Label fx:id="lbl_giris_tarih" alignment="TOP_CENTER" prefHeight="30.0" prefWidth="161.0" textFill="#2aa9c1">
+                                       <font>
+                                          <Font name="Bauhaus 93" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label alignment="TOP_CENTER" prefHeight="30.0" prefWidth="161.0" text="Çıkış Tarihi" textFill="#2aa9c1">
+                                       <font>
+                                          <Font name="Agency FB Bold" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <JFXDatePicker fx:id="data_cikis" onAction="#data_cikis" prefHeight="26.0" prefWidth="169.0" />
+                                    <Label fx:id="lbl_cikis_tarih" alignment="TOP_CENTER" prefHeight="30.0" prefWidth="161.0" textFill="#2aa9c1">
+                                       <font>
+                                          <Font name="Bauhaus 93" size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+                           <children>
+                              <Label alignment="TOP_CENTER" prefHeight="30.0" prefWidth="161.0" text="Ücretlendirme" textFill="#2aa9c1">
+                                 <font>
+                                    <Font name="Agency FB Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                              <JFXSlider fx:id="slider_ücret" blockIncrement="50.0" majorTickUnit="50.0" max="1000.0" min="30.0" minorTickCount="10" nodeOrientation="RIGHT_TO_LEFT" orientation="VERTICAL" prefHeight="310.0" prefWidth="100.0" showTickLabels="true" showTickMarks="true" value="50.0" />
+                              <Label fx:id="lbl_ücret" alignment="TOP_CENTER" prefHeight="30.0" prefWidth="161.0" textFill="#2aa9c1">
+                                 <font>
+                                    <Font name="Bauhaus 93" size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <Label alignment="TOP_CENTER" layoutX="240.0" layoutY="14.0" prefHeight="38.0" prefWidth="557.0" text="OTO YIKAMA OTOMASYONU" textFill="#2aa9c1">
+         <font>
+            <Font name="Agency FB Bold" size="26.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

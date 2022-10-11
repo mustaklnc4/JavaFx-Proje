@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="kayıt_ancpane" prefHeight="550.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.üyekayit">
+   <children>
+      <ImageView fitHeight="550.0" fitWidth="750.0" layoutX="460.0" layoutY="126.0" nodeOrientation="INHERIT" opacity="0.84" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@../image/personeltakip.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="179.0" layoutY="145.0" opacity="0.92" prefHeight="380.0" prefWidth="406.0" style="-fx-background-color: #e9e9e9; -fx-background-radius: 30;">
+         <children>
+            <VBox alignment="TOP_CENTER" layoutX="25.0" layoutY="44.0" prefHeight="347.0" prefWidth="356.0" spacing="10.0">
+               <children>
+                  <HBox alignment="TOP_CENTER" prefHeight="53.0" prefWidth="356.0" spacing="20.0">
+                     <children>
+                        <Label text="Yeni Üyemiz Olmaya Hazırmısınız" textFill="#b11616">
+                           <font>
+                              <Font name="Agency FB Bold" size="32.0" />
+                           </font>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="TOP_CENTER" prefHeight="262.0" prefWidth="356.0">
+                     <children>
+                        <VBox alignment="TOP_CENTER" prefHeight="146.0" prefWidth="178.0" spacing="20.0">
+                           <children>
+                              <JFXTextField fx:id="txt_user" focusColor="#b11616" labelFloat="true" promptText="Kullanıcı adı" unFocusColor="#474747">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </JFXTextField>
+                              <JFXPasswordField fx:id="txt_parola" focusColor="#b11616" labelFloat="true" promptText="Şifre">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </JFXPasswordField>
+                              <JFXPasswordField fx:id="txt_parolatekrar" focusColor="#b11616" labelFloat="true" promptText="Şifre Tekrar">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </JFXPasswordField>
+                              <JFXComboBox fx:id="combo_yetki" prefHeight="25.0" prefWidth="118.0" promptText="Yetkili" />
+                              <HBox alignment="TOP_CENTER" prefHeight="46.0" prefWidth="178.0" spacing="10.0">
+                                 <children>
+                                    <JFXButton fx:id="btn_geridön" onAction="#event_geridön" prefHeight="40.0" prefWidth="75.0" style="-fx-background-color: #4c4c4c;" text="Girişe dön" textFill="WHITE" />
+                                    <JFXButton fx:id="btn_ekle" onAction="#event_ekle" prefHeight="40.0" prefWidth="55.0" style="-fx-background-color: #4c4c4c;" text="Ekle" textFill="WHITE" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <Label fx:id="lbl_deger" alignment="TOP_CENTER" prefHeight="40.0" prefWidth="204.0">
+                     <font>
+                        <Font name="Bauhaus 93" size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

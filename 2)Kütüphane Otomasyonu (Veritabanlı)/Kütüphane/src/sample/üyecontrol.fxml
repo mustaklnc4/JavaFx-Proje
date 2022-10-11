@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anasayfa_ancpane" prefHeight="700.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.üyecontrol">
+    <children>
+      <ImageView fitHeight="700.0" fitWidth="1100.0" layoutY="329.0" opacity="0.91" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@../image/kitsp.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="300.0" layoutY="82.0" opacity="0.93" prefHeight="569.0" prefWidth="574.0" style="-fx-background-color: #e9e9e9; -fx-background-radius: 30;">
+         <children>
+            <VBox alignment="TOP_CENTER" layoutX="21.0" layoutY="14.0" prefHeight="520.0" prefWidth="533.0" spacing="15.0">
+               <children>
+                  <HBox alignment="TOP_CENTER" prefHeight="80.0" prefWidth="425.0" spacing="20.0">
+                     <children>
+                        <ImageView fitHeight="102.0" fitWidth="125.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/kitap.jpg" />
+                           </image>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </ImageView>
+                        <Label prefHeight="81.0" prefWidth="145.0" text="Üye Konrol" textFill="#647182">
+                           <font>
+                              <Font name="Berlin Sans FB Bold" size="25.0" />
+                           </font>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="TOP_CENTER" prefHeight="41.0" prefWidth="367.0" spacing="10.0">
+                     <children>
+                          <JFXButton fx:id="btn_üye" onAction="#event_üye" prefHeight="33.0" prefWidth="81.0" style="-fx-background-color: #647182;" text="Üye Ol" textFill="WHITE">
+                              <font>
+                                  <Font name="Berlin Sans FB Demi Bold" size="12.0" />
+                              </font>
+                          </JFXButton>
+                        <JFXButton fx:id="btn_güncelle" onAction="#event_güncelle" prefHeight="33.0" prefWidth="116.0" style="-fx-background-color: #647182;" text="Üye Güncelle" textFill="WHITE">
+                           <font>
+                              <Font name="Berlin Sans FB Demi Bold" size="12.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="btn_sil" onAction="#event_sil" prefHeight="33.0" prefWidth="81.0" style="-fx-background-color: #647182;" text="Üye Sil" textFill="WHITE">
+                           <font>
+                              <Font name="Berlin Sans FB" size="12.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+                  <TableView fx:id="tableview" onMouseClicked="#event_görüntüle" opacity="0.87" prefHeight="181.0" prefWidth="533.0" style="-fx-background-radius: 20; -fx-background-color: #647182;">
+                    <columns>
+                      <TableColumn fx:id="colon_id" prefWidth="75.0" text="id" />
+                      <TableColumn fx:id="colon_kulad" prefWidth="118.0" text="Kullanıcı Adı" />
+                        <TableColumn fx:id="colon_parola" prefWidth="107.0" text="Şifre" />
+                        <TableColumn fx:id="colon_yetki" prefWidth="124.0" text="Yetki" />
+                        <TableColumn fx:id="colon_yorum" prefWidth="124.0" text="Yorum" />
+                    </columns>
+                  </TableView>
+                  <HBox alignment="TOP_CENTER" prefHeight="269.0" prefWidth="533.0">
+                     <children>
+                        <VBox alignment="TOP_CENTER" prefHeight="250.0" prefWidth="347.0" spacing="10.0">
+                           <children>
+                              <HBox prefHeight="38.0" prefWidth="347.0" spacing="5.0">
+                                 <children>
+                                    <Label prefHeight="39.0" prefWidth="149.0" text="Kullanici Giris :" textFill="#064957">
+                                       <font>
+                                          <Font name="Berlin Sans FB Demi Bold" size="19.0" />
+                                       </font>
+                                    </Label>
+                                    <JFXTextField fx:id="txt_user" focusColor="#647182" labelFloat="true" promptText="Kullanıcı adı" unFocusColor="#647182">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </JFXTextField>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="38.0" prefWidth="347.0" spacing="5.0">
+                                 <children>
+                                    <Label prefHeight="38.0" prefWidth="146.0" text="Parola Giris :" textFill="#064957">
+                                       <font>
+                                          <Font name="Berlin Sans FB Demi Bold" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <JFXPasswordField fx:id="txt_parola" accessibleRole="TEXT_FIELD" focusColor="#647182" labelFloat="true" promptText="Şifre" unFocusColor="#647182">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </JFXPasswordField>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="43.0" prefWidth="347.0" spacing="5.0">
+                                 <children>
+                                    <Label prefHeight="40.0" prefWidth="152.0" text="Parola Onayla :" textFill="#064957">
+                                       <font>
+                                          <Font name="Berlin Sans FB Demi Bold" size="19.0" />
+                                       </font>
+                                    </Label>
+                                    <JFXPasswordField fx:id="txt_parolatekrar" accessibleRole="TEXT_FIELD" focusColor="#647182" labelFloat="true" promptText="Şifre Tekrar" unFocusColor="#647182">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </JFXPasswordField>
+                                 </children>
+                              </HBox>
+                              <JFXComboBox fx:id="combo_yetki" focusColor="#ae5151" prefHeight="25.0" prefWidth="123.0" />
+                              <JFXTextField fx:id="txt_yorum" focusColor="#647182" labelFloat="true" prefHeight="47.0" prefWidth="347.0" promptText="Yorum" unFocusColor="#647182">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </JFXTextField>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+              <JFXButton fx:id="btn_geri" layoutX="35.0" layoutY="525.0" onAction="#event_geri" prefHeight="33.0" prefWidth="81.0" style="-fx-background-color: #647182;" text="Geri Dön" textFill="WHITE">
+                  <font>
+                      <Font name="Berlin Sans FB Demi Bold" size="12.0" />
+                  </font>
+              </JFXButton>
+         </children>
+      </AnchorPane>
+    </children>
+</AnchorPane>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="login_ancpane" prefHeight="700.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.login">
+   <children>
+      <ImageView fitHeight="750.0" fitWidth="900.0" layoutX="386.0" nodeOrientation="RIGHT_TO_LEFT" opacity="0.51" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@../image/oto_yikama5.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="237.0" layoutY="126.0" opacity="0.9" prefHeight="539.0" prefWidth="426.0" style="-fx-background-radius: 20; -fx-background-color: white;">
+         <children>
+            <VBox alignment="TOP_CENTER" layoutX="61.0" layoutY="46.0" prefHeight="447.0" prefWidth="304.0" spacing="20.0">
+               <children>
+                  <HBox alignment="TOP_CENTER" prefHeight="108.0" prefWidth="259.0" spacing="20.0">
+                     <children>
+                        <ImageView fitHeight="125.0" fitWidth="133.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/login.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </ImageView>
+                        <Label prefHeight="111.0" prefWidth="118.0" text="Login" textFill="#2042bc">
+                           <font>
+                              <Font name="MV Boli" size="32.0" />
+                           </font>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <padding>
+                              <Insets top="10.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <JFXTextField fx:id="txt_ad" alignment="TOP_CENTER" labelFloat="true" promptText="Kullanıcı Adı" unFocusColor="#474747">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXPasswordField fx:id="txt_sifre" alignment="TOP_CENTER" labelFloat="true" promptText="Şifre">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </JFXPasswordField>
+                  <HBox alignment="TOP_CENTER" prefHeight="32.0" prefWidth="188.0" spacing="20.0">
+                     <children>
+                        <JFXRadioButton fx:id="rb_yönetici" text="Yönetici">
+                           <font>
+                              <Font name="Agency FB" size="20.0" />
+                           </font>
+                           <toggleGroup>
+                              <ToggleGroup fx:id="yetkili" />
+                           </toggleGroup>
+                        </JFXRadioButton>
+                        <JFXRadioButton fx:id="rb_kullanıcı" text="Kullanıcı" toggleGroup="$yetkili">
+                           <font>
+                              <Font name="Agency FB" size="20.0" />
+                           </font>
+                        </JFXRadioButton>
+                     </children>
+                  </HBox>
+                  <HBox alignment="TOP_CENTER" prefHeight="37.0" prefWidth="142.0" spacing="20.0">
+                     <children>
+                        <JFXButton fx:id="btn_üyekayıt" onAction="#click_üyekayıt" prefHeight="38.0" prefWidth="100.0" style="-fx-background-color: #27c2d6;" text="Üye Kayıt" textFill="WHITE">
+                           <font>
+                              <Font name="Agency FB Bold" size="20.0" />
+                           </font></JFXButton>
+                        <JFXButton onAction="#btngiris" prefHeight="58.0" prefWidth="83.0" style="-fx-background-color: #27c2d6;" text="Giris" textFill="WHITE">
+                           <font>
+                              <Font name="Agency FB Bold" size="20.0" />
+                           </font></JFXButton>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

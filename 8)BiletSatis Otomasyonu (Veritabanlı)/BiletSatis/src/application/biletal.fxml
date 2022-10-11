@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="paneSample" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="563.0" prefWidth="1151.0" style="-fx-background-color: #cc6a6a;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.biletal">
+   <children>
+      <Pane fx:id="pane_salon1" layoutX="14.0" layoutY="31.0" opacity="0.84" prefHeight="202.0" prefWidth="557.0" style="-fx-background-color: white; -fx-background-radius: 20;">
+         <effect>
+            <DropShadow color="#cc6a6a" height="61.03" radius="27.42" width="50.65" />
+         </effect>
+         <children>
+            <HBox layoutX="14.0" prefHeight="171.0" prefWidth="388.0" spacing="2.0">
+               <children>
+                  <VBox prefHeight="198.0" prefWidth="81.0" spacing="5.0">
+                     <children>
+                        <ImageView fitHeight="75.0" fitWidth="83.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@image/pngkey.com-seat-png-3533587.png" />
+                           </image>
+                        </ImageView>
+                        <RadioButton fx:id="s1_koltuk9" mnemonicParsing="false" prefHeight="16.0" prefWidth="68.0" text="Koltuk 9">
+                           <font>
+                              <Font name="Bauhaus 93" size="12.0" />
+                           </font>
+                           <toggleGroup>
+                              <ToggleGroup fx:id="koltuk" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <ImageView fitHeight="80.0" fitWidth="104.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@image/pngkey.com-seat-png-3533587.png" />
+                           </image>
+                        </ImageView>
+                        <RadioButton fx:id="s1_koltuk10" mnemonicParsing="false" prefHeight="16.0" prefWidth="83.0" text="Koltuk 10" toggleGroup="$koltuk">
+                           <font>
+                              <Font name="Bauhaus 93" size="12.0" />
+                           </font>
+                        </RadioButton>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="198.0" prefWidth="81.0" spacing="5.0">
+                     <children>
+                        <ImageView fitHeight="75.0" fitWidth="83.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@image/pngkey.com-seat-png-3533587.png" />
+                           </image>
+                        </ImageView>
+                        <RadioButton fx:id="s1_koltuk7" mnemonicParsing="false" prefHeight="16.0" prefWidth="68.0" text="Koltuk 7" toggleGroup="$koltuk">
+                           <font>
+                              <Font name="Bauhaus 93" size="12.0" />
+                           </font>
+                        </RadioButton>
+                        <ImageView fitHeight="80.0" fitWidth="104.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@image/pngkey.com-seat-png-3533587.png" />
+                           </image>
+                        </ImageView>
+                        <RadioButton fx:id="s1_koltuk8" mnemonicParsing="false" prefHeight="16.0" prefWidth="68.0" text="Koltuk 8" toggleGroup="$koltuk">
+                           <font>
+                              <Font name="Bauhaus 93" size="12.0" />
+                           </font>
+                        </RadioButton>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="198.0" prefWidth="81.0" spacing="5.0">
+                     <children>
+                        <ImageView fitHeight="75.0" fitWidth="83.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@image/pngkey.com-seat-png-3533587.png" />
+                           </image>
+                        </ImageView>
+                        <RadioButton fx:id="s1_koltuk5" mnemonicParsing="false" prefHeight="16.0" prefWidth="68.0" text="Koltuk 5" toggleGroup="$koltuk">
+                           <font>
+                              <Font name="Bauhaus 93" size="12.0" />
+                           </font>
+                        </RadioButton>
+                        <ImageView fitHeight="80.0" fitWidth="104.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@image/pngkey.com-seat-png-3533587.png" />
+                           </image>
+                        </ImageView>
+                        <RadioButton fx:id="s1_koltuk6" mnemonicParsing="false" prefHeight="16.0" prefWidth="68.0" text="Koltuk 6" toggleGroup="$koltuk">
+                           <font>
+                              <Font name="Bauhaus 93" size="12.0" />
+                           </font>
+                        </RadioButton>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="198.0" prefWidth="81.0" spacing="5.0">
+                     <children>
+                        <ImageView fitHeight="75.0" fitWidth="83.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@image/pngkey.com-seat-png-3533587.png" />
+                           </image>
+                        </ImageView>
+                        <RadioButton fx:id="s1_koltuk3" mnemonicParsing="false" prefHeight="16.0" prefWidth="79.0" text="Koltuk 3" toggleGroup="$koltuk">
+                           <font>
+                              <Font name="Bauhaus 93" size="12.0" />
+                           </font>
+                        </RadioButton>
+                        <ImageView fitHeight="80.0" fitWidth="104.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@image/pngkey.com-seat-png-3533587.png" />
+                           </image>
+                        </ImageView>
+                        <RadioButton fx:id="s1_koltuk4" mnemonicParsing="false" prefHeight="16.0" prefWidth="68.0" text="Koltuk 4" toggleGroup="$koltuk">
+                           <font>
+                              <Font name="Bauhaus 93" size="12.0" />
+                           </font>
+                        </RadioButton>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="198.0" prefWidth="81.0" spacing="5.0">
+                     <children>
+                        <ImageView fitHeight="75.0" fitWidth="83.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@image/pngkey.com-seat-png-3533587.png" />
+                           </image>
+                        </ImageView>
+                        <RadioButton fx:id="s1_koltuk1" mnemonicParsing="false" prefHeight="16.0" prefWidth="68.0" text="Koltuk 1" toggleGroup="$koltuk">
+                           <font>
+                              <Font name="Bauhaus 93" size="12.0" />
+                           </font>
+                        </RadioButton>
+                        <ImageView fitHeight="80.0" fitWidth="104.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@image/pngkey.com-seat-png-3533587.png" />
+                           </image>
+                        </ImageView>
+                        <RadioButton fx:id="s1_koltuk2" mnemonicParsing="false" prefHeight="16.0" prefWidth="68.0" text="Koltuk 2" toggleGroup="$koltuk">
+                           <font>
+                              <Font name="Bauhaus 93" size="12.0" />
+                           </font>
+                        </RadioButton>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <ImageView fitHeight="153.0" fitWidth="143.0" layoutX="409.0" layoutY="44.0" pickOnBounds="true">
+               <image>
+                  <Image url="@image/kisspng-theater-drapes-and-stage-curtains-theatre-free-curtain-images-download-5ab19f404484b4.3871546915215900802807.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="418.0" layoutY="14.0" prefHeight="30.0" prefWidth="100.0" text="Salon 1">
+               <font>
+                  <Font name="Bauhaus 93" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <TableView fx:id="tableviev" layoutX="14.0" layoutY="260.0" onMouseClicked="#event_click" prefHeight="251.0" prefWidth="689.0" style="-fx-background-radius: 10;">
+        <columns>
+          <TableColumn fx:id="id_c" prefWidth="60.0" text="id" />
+          <TableColumn fx:id="salon_c" prefWidth="93.0" text="Salon" />
+            <TableColumn fx:id="koltuk_c" prefWidth="114.99996948242188" text="Koltuk" />
+            <TableColumn fx:id="film_c" prefWidth="117.00003051757812" text="Film Türü" />
+            <TableColumn fx:id="isim_c" prefWidth="90.0" text="İsim Soyisim" />
+            <TableColumn fx:id="tarih_c" prefWidth="116.0" text="Tarih" />
+            <TableColumn fx:id="fiyat_c" prefWidth="98.0" text="Fiyat" />
+        </columns>
+      </TableView>
+      <VBox layoutX="718.0" layoutY="294.0" prefHeight="186.0" prefWidth="100.0" spacing="5.0">
+         <children>
+            <Button fx:id="btn_ekle" mnemonicParsing="false" onAction="#event_ekle" prefHeight="34.0" prefWidth="127.0" text="Ekle" />
+            <Button fx:id="btn_sil" mnemonicParsing="false" onAction="#event_sil" prefHeight="33.0" prefWidth="107.0" text="Kayıt Sil" />
+            <Button fx:id="btn_güncelle" mnemonicParsing="false" onAction="#event_güncelle" prefHeight="33.0" prefWidth="108.0" text="Güncelle" />
+            <Button fx:id="btn_cik" mnemonicParsing="false" onAction="#event_cik" prefHeight="33.0" prefWidth="116.0" text="Çık" />
+         </children>
+      </VBox>
+      <Pane layoutX="840.0" layoutY="261.0" opacity="0.94" prefHeight="251.0" prefWidth="272.0" style="-fx-background-color: white; -fx-background-radius: 10;">
+         <effect>
+            <DropShadow height="32.49" radius="16.58" width="35.83" />
+         </effect>
+         <children>
+            <VBox layoutX="14.0" layoutY="14.0" prefHeight="234.0" prefWidth="248.0" spacing="5.0">
+               <children>
+                  <HBox prefHeight="41.0" prefWidth="242.0" spacing="5.0">
+                     <children>
+                        <ComboBox fx:id="cmb_salon" prefHeight="34.0" prefWidth="177.0" promptText="Salon" styleClass="checkbox" />
+                        <Button fx:id="btn_salon" mnemonicParsing="false" onAction="#event_salon" prefHeight="33.0" prefWidth="91.0" text="Salon Çağır" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="34.0" prefWidth="248.0" spacing="5.0">
+                     <children>
+                        <ComboBox fx:id="cmb_tür" prefHeight="34.0" prefWidth="114.0" promptText="Film Türü" styleClass="checkbox" />
+                        <TextField fx:id="field_isim" alignment="TOP_LEFT" prefHeight="35.0" prefWidth="150.0" promptText="Ad Soyad" styleClass="text-field" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="30.0" prefWidth="229.0" spacing="10.0">
+                     <children>
+                        <DatePicker fx:id="data_tarih" onAction="#click_tarih" prefHeight="30.0" prefWidth="157.0" promptText="Tarih" />
+                        <Label fx:id="lbl_tarih" prefHeight="36.0" prefWidth="91.0" textFill="#cc6a6a">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <Label alignment="CENTER" prefHeight="30.0" prefWidth="243.0" text="Fiyat" textFill="#cc6a6a">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Slider fx:id="Sldr_fiyat" blockIncrement="1.0" majorTickUnit="1.0" min="10.0" minorTickCount="1" prefHeight="46.0" prefWidth="242.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" style="-fx-background-radius: 5;" styleClass="table-view" value="10.0" />
+                  <Label fx:id="lbl_fiyat" prefHeight="29.0" prefWidth="114.0" textFill="#cc6a6a">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+      </Pane>
+      <Pane fx:id="pane_salon2" layoutX="579.0" layoutY="31.0" opacity="0.84" prefHeight="202.0" prefWidth="557.0" style="-fx-background-color: white; -fx-background-radius: 20;">
+         <effect>
+            <DropShadow color="#cc6a6a" height="61.03" radius="27.42" width="50.65" />
+         </effect>
+         <children>
+            <HBox layoutX="14.0" prefHeight="171.0" prefWidth="388.0" spacing="2.0">
+               <children>
+                  <VBox prefHeight="198.0" prefWidth="81.0" spacing="5.0">
+                     <children>
+                        <ImageView fitHeight="75.0" fitWidth="83.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@image/pngkey.com-seat-png-3533587.png" />
+                           </image>
+                        </ImageView>
+                        <RadioButton fx:id="s2_koltuk9" mnemonicParsing="false" prefHeight="16.0" prefWidth="68.0" text="Koltuk 9" toggleGroup="$koltuk">
+                           <font>
+                              <Font name="Bauhaus 93" size="12.0" />
+                           </font>
+                        </RadioButton>
+                        <ImageView fitHeight="80.0" fitWidth="104.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@image/pngkey.com-seat-png-3533587.png" />
+                           </image>
+                        </ImageView>
+                        <RadioButton fx:id="s2_koltuk10" mnemonicParsing="false" prefHeight="16.0" prefWidth="83.0" text="Koltuk 10" toggleGroup="$koltuk">
+                           <font>
+                              <Font name="Bauhaus 93" size="12.0" />
+                           </font>
+                        </RadioButton>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="198.0" prefWidth="81.0" spacing="5.0">
+                     <children>
+                        <ImageView fitHeight="75.0" fitWidth="83.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@image/pngkey.com-seat-png-3533587.png" />
+                           </image>
+                        </ImageView>
+                        <RadioButton fx:id="s2_koltuk7" mnemonicParsing="false" prefHeight="16.0" prefWidth="68.0" text="Koltuk 7" toggleGroup="$koltuk">
+                           <font>
+                              <Font name="Bauhaus 93" size="12.0" />
+                           </font>
+                        </RadioButton>
+                        <ImageView fitHeight="80.0" fitWidth="104.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@image/pngkey.com-seat-png-3533587.png" />
+                           </image>
+                        </ImageView>
+                        <RadioButton fx:id="s2_koltuk8" mnemonicParsing="false" prefHeight="16.0" prefWidth="68.0" text="Koltuk 8" toggleGroup="$koltuk">
+                           <font>
+                              <Font name="Bauhaus 93" size="12.0" />
+                           </font>
+                        </RadioButton>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="198.0" prefWidth="81.0" spacing="5.0">
+                     <children>
+                        <ImageView fitHeight="75.0" fitWidth="83.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@image/pngkey.com-seat-png-3533587.png" />
+                           </image>
+                        </ImageView>
+                        <RadioButton fx:id="s2_koltuk5" mnemonicParsing="false" prefHeight="16.0" prefWidth="68.0" text="Koltuk 5" toggleGroup="$koltuk">
+                           <font>
+                              <Font name="Bauhaus 93" size="12.0" />
+                           </font>
+                        </RadioButton>
+                        <ImageView fitHeight="80.0" fitWidth="104.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@image/pngkey.com-seat-png-3533587.png" />
+                           </image>
+                        </ImageView>
+                        <RadioButton fx:id="s2_koltuk6" mnemonicParsing="false" prefHeight="16.0" prefWidth="68.0" text="Koltuk 6" toggleGroup="$koltuk">
+                           <font>
+                              <Font name="Bauhaus 93" size="12.0" />
+                           </font>
+                        </RadioButton>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="198.0" prefWidth="81.0" spacing="5.0">
+                     <children>
+                        <ImageView fitHeight="75.0" fitWidth="83.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@image/pngkey.com-seat-png-3533587.png" />
+                           </image>
+                        </ImageView>
+                        <RadioButton fx:id="s2_koltuk3" mnemonicParsing="false" prefHeight="16.0" prefWidth="79.0" text="Koltuk 3" toggleGroup="$koltuk">
+                           <font>
+                              <Font name="Bauhaus 93" size="12.0" />
+                           </font>
+                        </RadioButton>
+                        <ImageView fitHeight="80.0" fitWidth="104.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@image/pngkey.com-seat-png-3533587.png" />
+                           </image>
+                        </ImageView>
+                        <RadioButton fx:id="s2_koltuk4" mnemonicParsing="false" prefHeight="16.0" prefWidth="68.0" text="Koltuk 4" toggleGroup="$koltuk">
+                           <font>
+                              <Font name="Bauhaus 93" size="12.0" />
+                           </font>
+                        </RadioButton>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="198.0" prefWidth="81.0" spacing="5.0">
+                     <children>
+                        <ImageView fitHeight="75.0" fitWidth="83.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@image/pngkey.com-seat-png-3533587.png" />
+                           </image>
+                        </ImageView>
+                        <RadioButton fx:id="s2_koltuk1" mnemonicParsing="false" prefHeight="16.0" prefWidth="68.0" text="Koltuk 1" toggleGroup="$koltuk">
+                           <font>
+                              <Font name="Bauhaus 93" size="12.0" />
+                           </font>
+                        </RadioButton>
+                        <ImageView fitHeight="80.0" fitWidth="104.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@image/pngkey.com-seat-png-3533587.png" />
+                           </image>
+                        </ImageView>
+                        <RadioButton fx:id="s2_koltuk2" mnemonicParsing="false" prefHeight="16.0" prefWidth="68.0" text="Koltuk 2" toggleGroup="$koltuk">
+                           <font>
+                              <Font name="Bauhaus 93" size="12.0" />
+                           </font>
+                        </RadioButton>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <ImageView fitHeight="153.0" fitWidth="143.0" layoutX="409.0" layoutY="44.0" pickOnBounds="true">
+               <image>
+                  <Image url="@image/kisspng-theater-drapes-and-stage-curtains-theatre-free-curtain-images-download-5ab19f404484b4.3871546915215900802807.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="418.0" layoutY="14.0" prefHeight="30.0" prefWidth="100.0" text="Salon 2">
+               <font>
+                  <Font name="Bauhaus 93" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

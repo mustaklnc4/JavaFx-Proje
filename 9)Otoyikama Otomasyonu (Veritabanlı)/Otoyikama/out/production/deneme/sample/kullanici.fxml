@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="kullanici_ancpane" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.kullanici">
+   <children>
+      <ImageView fitHeight="700.0" fitWidth="1019.0" opacity="0.74" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-19.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@../image/oto_yikama5.jpg" />
+         </image>
+      </ImageView>
+      <Pane layoutX="238.0" layoutY="518.0" opacity="0.85" prefHeight="161.0" prefWidth="524.0" style="-fx-background-color: white;">
+         <children>
+            <VBox layoutX="28.0" layoutY="8.0" prefHeight="165.0" prefWidth="469.0">
+               <children>
+                  <HBox prefHeight="69.0" prefWidth="469.0" spacing="45.0">
+                     <children>
+                        <ImageView fitHeight="65.0" fitWidth="94.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/cık.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="70.0" fitWidth="87.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/üyekontrol.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="64.0" fitWidth="102.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/iconaraba.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="60.0" fitWidth="84.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/otoparlat.jpg" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="83.0" prefWidth="515.0" spacing="10.0">
+                     <children>
+                        <JFXButton fx:id="btn_geri" onAction="#event_geri" prefHeight="66.0" prefWidth="101.0" style="-fx-background-color: #21598c; -fx-background-radius: 20;" text="Geri Dön" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Narrow" size="21.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="btn_üye" onAction="#event_üye" prefHeight="65.0" prefWidth="123.0" style="-fx-background-color: #21598c; -fx-background-radius: 20;" text="Üye Ol" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Narrow" size="21.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="btn_oto_kayit" onAction="#event_oto_kayit" prefHeight="64.0" prefWidth="106.0" style="-fx-background-color: #21598c; -fx-background-radius: 20;" text="Oto Kayıt" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Narrow" size="21.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="btn_temizlenen" onAction="#event_temizlenen" prefHeight="66.0" prefWidth="124.0" style="-fx-background-color: #21598c; -fx-background-radius: 20;" text="Temizlenen" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Narrow" size="21.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

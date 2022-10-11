@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="kayıt_ancpane" prefHeight="700.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Kontrol">
+   <children>
+      <ImageView fitHeight="700.0" fitWidth="800.0" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@image/computer-icon-png-17.jpg" />
+         </image>
+      </ImageView>
+      <Pane layoutX="157.0" layoutY="114.0" opacity="0.88" prefHeight="473.0" prefWidth="470.0" style="-fx-background-color: white; -fx-background-radius: 20;">
+         <effect>
+            <DropShadow height="106.99" radius="47.805" width="86.23" />
+         </effect>
+         <children>
+            <TableView fx:id="tableview" layoutX="23.0" layoutY="104.0" onMouseClicked="#event_click" prefHeight="200.0" prefWidth="416.0" style="-fx-background-radius: 30;" stylesheets="@application.css">
+               <columns>
+                  <TableColumn fx:id="colon_id" prefWidth="65.0" text="id" />
+                  <TableColumn fx:id="colon_kulad" prefWidth="85.0" text="Kul_Adı" />
+                  <TableColumn fx:id="colon_parola" prefWidth="75.0" text="Parola" />
+                  <TableColumn fx:id="colon_mail" prefWidth="75.0" text="Email" />
+                  <TableColumn fx:id="colon_yetki" prefWidth="75.0" text="Yetki" />
+               </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            <HBox layoutX="71.0" layoutY="312.0" prefHeight="38.0" prefWidth="329.0" spacing="5.0">
+               <children>
+                  <Button fx:id="btn_ekle" mnemonicParsing="false" onAction="#event_ekle" prefHeight="33.0" prefWidth="102.0" stylesheets="@application.css" text="Kayıt" />
+                  <Button fx:id="btn_guncelle" mnemonicParsing="false" onAction="#event_guncelle" prefHeight="33.0" prefWidth="114.0" stylesheets="@application.css" text="Güncelle" />
+                  <Button fx:id="btn_sil" mnemonicParsing="false" onAction="#event_sil" prefHeight="33.0" prefWidth="87.0" stylesheets="@application.css" text="Sil" />
+               </children>
+            </HBox>
+            <HBox layoutX="105.0" layoutY="14.0" prefHeight="89.0" prefWidth="268.0" spacing="2.0">
+               <children>
+                  <Label prefHeight="82.0" prefWidth="140.0" text="User" textFill="#dd2020">
+                     <font>
+                        <Font name="Bauhaus 93" size="63.0" />
+                     </font>
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding>
+                  </Label>
+                  <ImageView fitHeight="90.0" fitWidth="109.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@image/computer-5.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <Label fx:id="lbl_deger" layoutX="156.0" layoutY="440.0" prefHeight="25.0" prefWidth="148.0" style="-fx-font-size: 14;" stylesheets="@application.css" />
+            <HBox layoutX="14.0" layoutY="390.0" prefHeight="50.0" prefWidth="435.0" spacing="2.0">
+               <children>
+                  <TextField fx:id="txt_user" alignment="CENTER" prefHeight="40.0" prefWidth="125.0" promptText="Kullanıcı" style="-fx-background-radius: 10;" />
+                  <PasswordField fx:id="txt_parola" alignment="CENTER" prefHeight="41.0" prefWidth="125.0" promptText="Parola" style="-fx-background-radius: 10;" />
+                  <PasswordField fx:id="txt_parolatekrar" alignment="CENTER" prefHeight="39.0" prefWidth="125.0" promptText="Parola" style="-fx-background-radius: 10;" />
+                  <TextField fx:id="txt_mail" alignment="CENTER" prefHeight="38.0" prefWidth="125.0" promptText="Mail" style="-fx-background-radius: 10;" />
+                  <ComboBox fx:id="combo_yetki" editable="true" prefHeight="36.0" prefWidth="125.0" promptText="Yetki" style="-fx-background-radius: 10;" />
+               </children>
+            </HBox>
+            <HBox alignment="TOP_CENTER" layoutX="68.0" layoutY="350.0" prefHeight="40.0" prefWidth="336.0" spacing="5.0">
+               <children>
+                  <Button fx:id="btn_geri" mnemonicParsing="false" onAction="#event_geri" prefHeight="33.0" prefWidth="101.0" stylesheets="@application.css" text="Çıkış" />
+                  <Button fx:id="btn_temizle" mnemonicParsing="false" onAction="#event_temizle" prefHeight="33.0" prefWidth="101.0" stylesheets="@application.css" text="Süpür" />
+                  <Button fx:id="btn_görüntüle" mnemonicParsing="false" onAction="#event_görüntüle" prefHeight="33.0" prefWidth="101.0" stylesheets="@application.css" text="Parola" />
+               </children>
+            </HBox>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

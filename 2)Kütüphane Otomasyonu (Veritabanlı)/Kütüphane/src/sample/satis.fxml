@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="satis_ancpane" prefHeight="650.0" prefWidth="900.0" style="-fx-background-color: #647182;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.satis">
+   <children>
+      <AnchorPane layoutX="25.0" layoutY="14.0" opacity="0.93" prefHeight="628.0" prefWidth="856.0" style="-fx-background-color: #e9e9e9; -fx-background-radius: 30;">
+         <children>
+            <VBox alignment="TOP_CENTER" layoutX="14.0" layoutY="41.0" prefHeight="576.0" prefWidth="829.0" spacing="15.0">
+               <children>
+                  <HBox prefHeight="372.0" prefWidth="829.0">
+                     <children>
+                        <BarChart fx:id="Salarychart" prefHeight="412.0" prefWidth="508.0">
+                           <xAxis>
+                              <CategoryAxis side="BOTTOM" fx:id="x" />
+                           </xAxis>
+                           <yAxis>
+                              <NumberAxis fx:id="y" side="LEFT" upperBound="200.0" />
+                           </yAxis>
+                        </BarChart>
+                        <PieChart fx:id="pastadilimi" prefHeight="412.0" prefWidth="556.0" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="TOP_CENTER" prefHeight="36.0" prefWidth="546.0" spacing="10.0">
+                     <children>
+                        <JFXButton fx:id="btn_tara" onAction="#event_tara" prefHeight="33.0" prefWidth="81.0" style="-fx-background-color: #647182;" text="Tara" textFill="WHITE">
+                           <font>
+                              <Font name="Bell MT Bold" size="18.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="btn_sil" onAction="#event_sil" prefHeight="34.0" prefWidth="109.0" style="-fx-background-color: #647182;" text="Kitap Sil" textFill="WHITE">
+                           <font>
+                              <Font name="Bell MT Bold" size="18.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+                  <TableView fx:id="tableview" onMouseClicked="#event_görüntüle" opacity="0.87" prefHeight="233.0" prefWidth="790.0" style="-fx-background-color: #647182;">
+                     <columns>
+                        <TableColumn fx:id="colon_id" prefWidth="52.0" text="id" />
+                        <TableColumn fx:id="colon_kitap_adı" prefWidth="122.0" text="Kitap adı" />
+                        <TableColumn fx:id="colon_yazar" prefWidth="114.0" text="Yazar" />
+                        <TableColumn fx:id="colon_kitaptürü" prefWidth="90.0" text="Kitap Türü" />
+                        <TableColumn fx:id="colon_telefon" minWidth="0.0" prefWidth="121.0" text="Telefon" />
+                        <TableColumn fx:id="colon_durum" minWidth="0.0" prefWidth="91.0" text="Durum" />
+                        <TableColumn fx:id="colon_fiyat" minWidth="0.0" prefWidth="90.0" text="Fiyat" />
+                        <TableColumn fx:id="colon_tarih" minWidth="0.0" prefWidth="148.0" text="Tarih" />
+                     </columns>
+                  </TableView>
+               </children>
+            </VBox>
+            <JFXButton fx:id="btn_cikis" layoutX="23.0" layoutY="8.0" onAction="#event_cikis" prefHeight="33.0" prefWidth="81.0" style="-fx-background-color: #647182;" text="Çıkış" textFill="WHITE">
+               <font>
+                  <Font name="Bell MT Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <HBox layoutX="329.0" layoutY="7.0" prefHeight="34.0" prefWidth="422.0" spacing="10.0">
+               <children>
+                  <Label fx:id="label_kitaptürü" prefHeight="34.0" prefWidth="133.0" text="Kitap Türü :" textFill="#647182">
+                     <font>
+                        <Font name="Berlin Sans FB Demi Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="label_yazar" prefHeight="34.0" prefWidth="145.0" text="Yazar :" textFill="#647182">
+                     <font>
+                        <Font name="Berlin Sans FB Demi Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="label_tarih" prefHeight="34.0" prefWidth="124.0" text="Tarih :" textFill="#647182">
+                     <font>
+                        <Font name="Berlin Sans FB Demi Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
